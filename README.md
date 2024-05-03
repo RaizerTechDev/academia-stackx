@@ -2,7 +2,10 @@
 
 <br>
 
- <div align="center">
+<div align="center">
+<img src="https://media.giphy.com/media/9TFBxN300KpCUI6sBD/giphy.gif" align="center" height="45" width="45">
+
+[ ( Clique aqui e escolha o Combo de sua preferência: `StackX-Academy-Project!!!`) ](https://rafarz76dev.github.io/academia-stackx/)
 
 <br>
 
