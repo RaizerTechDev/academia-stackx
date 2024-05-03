@@ -1,0 +1,236 @@
+/* Estilos Globais */
+
+/* Estilos para a navegação */
+header {
+  position: fixed; /* Define o posicionamento fixo */
+  top: 0; /* Fixa o cabeçalho no topo */
+  width: 100%; /* Define a largura total */
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ajusta a ordem de sobreposição */
+}
+
+.logo {
+  font-size: 1.3rem;
+  background-image: linear-gradient(
+    to right,
+    orange,
+    #ffd700
+  ); /* Gradiente de laranja para amarelo */
+  -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
+  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
+  text-shadow: 4px 4px 8px rgba(255, 254, 254, 0.5); /* Adicionar sombreamento preto */
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline #ffff;
+  margin-left: 15px;
+}
+
+.logo:hover {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline orange;
+  transform: scale(
+    1.1
+  ); /* Aumenta a escala da imagem em 20% ao passar o mouse */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Altera o display para flexbox */
+  justify-content: space-between; /* Distribui os itens uniformemente */
+  flex-direction: column;
+}
+
+nav ul li {
+  display: inline;
+  font-size: 16px;
+  margin-bottom: 14px; /* Afasta os itens verticalmente */
+}
+
+nav ul li a {
+  color: orange;
+  text-decoration: none;
+  margin-right: 3.5rem; /* Reduza a margem entre os itens */
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transform: scale(
+    1.5
+  ); /* Aumenta a escala da imagem em 50% ao passar o mouse */
+}
+
+/* Estilo para seção (hero) */
+.hero {
+  background-image: url(../../img/fundo-header.jpg);
+  padding: 20px;
+  text-align: center;
+}
+
+.hero__subtitle {
+  font-size: 25px;
+  color: #ff8c00;
+  font-weight: bold;
+  margin-top: 180px;
+  margin-left: -10px;
+}
+.hero__subtitle span {
+  color: rgb(147, 249, 92);
+  text-decoration: underline;
+}
+
+.hero__image {
+  max-width: 250px;
+  margin-left: -20px;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-image: url(../../img/fundo-header.jpg);
+  width: 100%;
+  margin-top: -50px;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer__title {
+  color: #c6c4c4;
+  font-weight: bold; /* Define a espessura da fonte como negrito */
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: -5px;
+}
+
+footer p {
+  color: #c6c4c4;
+  text-align: center;
+}
+
+/* Estilos para os ícones de redes sociais */
+.social-icons {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #ee90cd;
+  transition: color 0.3s ease;
+}
+.social-icon:hover {
+  color: rgba(239, 243, 238, 0.8);
+  transform: scale(
+    1.5
+  ); /* Aumenta a escala da imagem em 20% ao passar o mouse */
+}
+
+.plansAndPrices {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente em várias linhas */
+  justify-content: center;
+  padding: 50px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
+}
+
+.plansContainer {
+  border: solid 2px white;
+  width: 250px;
+  height: 400px;
+  padding: 30px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 50px; /* Adicionar margem entre os cards */
+  margin-top: 80px;
+}
+.plansContainer:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 30px white;
+  background-color: orange;
+}
+
+.title {
+  font-size: 40px;
+  color: orange;
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.subtitle {
+  font-size: 25px; /* Reduzir o tamanho da fonte para dispositivos menores */
+  color: rgb(149, 255, 0);
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.values {
+  font-size: 40px;
+  color: orange;
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.plansContainer:hover .title {
+  color: black;
+}
+
+.plansContainer:hover .values {
+  color: black;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonBuy {
+  background-color: orange;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonBuy:hover {
+  transform: scale(1.2);
+  background-color: white;
+}
+
+.separator {
+  border: none;
+  border-top: 3px solid #ddd; /* Cor e espessura da linha */
+  margin: 100px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+@media screen and (min-width: 768px) {
+  .plansContainer {
+    width: 300px; /* Aumentar a largura dos cards em dispositivos médios e grandes */
+    height: 450px; /* Ajustar a altura dos cards em dispositivos médios e grandes */
+    padding: 30px 50px; /* Ajustar o padding dos cards em dispositivos médios e grandes */
+  }
+}
