@@ -4,12 +4,43 @@ import Input from "../input";
 import "./index.css";
 
 function Register() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  //Criar as listas com array
+  const initialFormData = {
+    name: "",
+    email: "",
+    phone: "",
+  };
 
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const response = await fetch(
+      "https://api.sheetmonkey.io/form/uM1Q7XZyF85NbpeU6wSwFB",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (response.ok) {
+      // Handle success (optional)
+      console.log("Form submitted successfully!");
+
+      setFormData(initialFormData); // Reset form after successful submission
+    } else {
+      // Handle error
+      console.error("Form submission failed:", response.status);
+    }
   };
 
   return (
@@ -18,30 +49,38 @@ function Register() {
         <Input
           className="registerInput"
           type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
           required
           placeholder="Digite seu nome"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
         />
         <Input
           className="registerInput"
           type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
           required
           placeholder="Digite seu e-mail"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
         />
+
         {/* Campo para o número de telefone */}
         <Input
           className="registerInput"
           type="tel"
+          id="phone"
+          name="phone"
+          value={formData.message}
+          onChange={handleChange}
           required
           placeholder="Digite seu número de telefone (com DDD)"
-          onChange={(e) => setPhone(e.target.value)}
-          value={phone}
-        />
+        />       
       </form>
     </div>
   );
 }
+
 export default Register;

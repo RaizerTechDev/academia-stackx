@@ -1,5 +1,6 @@
 /* Estilos para o contêiner do formulário */
 .registerContainer {
+  margin-top: 50px;
   padding: 15px;
 }
 
@@ -12,5 +13,27 @@
   font-weight: bold;
   border: 1px solid #ccc;
 }
+
+/* Estilos para o botão */
+.buttonRegister {
+  display: block;
+  padding: 12px;
+  background-color: orange;
+  color: #222222; /* Cor do texto do botão */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 45px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonRegister:hover {
+  transform: scale(1.05);
+  background-color: black;
+  color: #ffffff;
+}
+
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import PlansAndPrices from "../PlansandPrices";
+import PlansandPrices from "../PlansandPrices";
 import academiaImage from "../../img/academia_header.gif";
 import "./index.css";
 
@@ -9,7 +9,7 @@ function UIComponents() {
     <div>
       <Header />
       <Hero />
-      <PlansAndPrices/>
+      <PlansandPrices />       
       <Footer />
     </div>
   );

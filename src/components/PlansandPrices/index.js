@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState} from "react";
 import Title from "../title";
+import Subtitle from "../subtitle";
 import ImagePlans from "../imagePlans";
+import Register from "../register";
 import Button from "../button";
 import Modal from "../modal";
-import Register from "../register";
 import Values from "../values";
 import combo1 from "../../img/combo-01.gif";
 import combo2 from "../../img/combo-02.gif";
@@ -51,7 +52,7 @@ function PlansAndPrices() {
       `Cadastro para o Combo ${
         selectedCombo + 1
       } realizado com sucesso, estraremos em contato em 24h
-      `
+     `
     );
     handleCloseModal();
   };
@@ -63,6 +64,7 @@ function PlansAndPrices() {
           <div>
             <div className="plansContainer">
               <Title className="title" title={item.title} />
+              <Subtitle className="subtitle" subtitle={item.subtitle} />
               <ImagePlans src={item.src} alt={item.alt} />
               <Values className="values" value={item.value} />
             </div>
@@ -76,7 +78,7 @@ function PlansAndPrices() {
                 onClose={handleCloseModal}
                 isOpen={selectedCombo === index}
               >
-                <Register />
+                <Register/>
                 <Button
                   className="buttonRegister"
                   type="submit"
