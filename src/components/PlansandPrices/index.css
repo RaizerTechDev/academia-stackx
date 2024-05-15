@@ -1,90 +1,137 @@
 /* Estilos Globais */
 .plansAndPrices {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente em várias linhas */
-    justify-content: center;
-    padding: 50px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
-  }
-  
-  .plansContainer {
-    border: solid 2px white;
-    width: 250px;
-    height: 400px;
-    padding: 30px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin: 50px; /* Adicionar margem entre os cards */
-    margin-top: 80px;
-  }
-  .plansContainer:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 30px white;
-    background-color: orange;
-  }
-  
-  .title {
-    font-size: 40px;
-    color: orange;
-    font-family: "Lato", sans-serif;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-  }
-  .subtitle {
-    font-size: 25px; /* Reduzir o tamanho da fonte para dispositivos menores */
-    color: rgb(149, 255, 0);
-    font-family: "Lato", sans-serif;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-  }
-  .values {
-    font-size: 40px;
-    color: orange;
-    font-family: "Lato", sans-serif;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .plansContainer:hover .title {
-    color: black;
-  }
-  
-  .plansContainer:hover .values {
-    color: black;
-  }
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente em várias linhas */
+  justify-content: center;
+  padding: 50px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
+}
 
+.plansContainer {
+  border: solid 2px white;
+  width: 250px;
+  height: 400px;
+  padding: 30px 20px; /* Reduzir o padding para economizar espaço em dispositivos menores */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 50px; /* Adicionar margem entre os cards */
+  margin-top: 80px;
+}
+.plansContainer:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 30px white;
+  background-color: orange;
+}
+
+.title {
+  font-size: 40px;
+  color: orange;
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.subtitle {
+  font-size: 25px; /* Reduzir o tamanho da fonte para dispositivos menores */
+  color: rgb(149, 255, 0);
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.values {
+  font-size: 40px;
+  color: orange;
+  font-family: "Lato", sans-serif;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.plansContainer:hover .title {
+  color: black;
+}
+
+.plansContainer:hover .values {
+  color: black;
+}
 
 modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonBuy {
+  background-color: orange;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold; 
+  margin-left: 100px;
+}
+
+.buttonBuy:hover {
+  transform: scale(1.2);
+  background-color: white;
+  color: rgb(144, 82, 1);
+  font-weight: bold; 
+}
+
+.separator {
+  border: none;
+  border-top: 3px solid orange; /* Cor e espessura da linha */
+  margin: 100px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+/* Estilos para o contêiner do formulário */
+.registerContainer {
+  margin-top: 50px;
+  padding: 15px;
+}
+
+/* Estilos para os inputs do formulário */
+.registerInput {
+  width: 82%;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para o botão */
+.buttonRegister {
+  display: block;
+  padding: 12px;
+  background-color: orange;
+  color: #222222; /* Cor do texto do botão */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 45px;
+  transition: background-color 0.3s ease;  
+}
+
+.buttonRegister:hover {
+  transform: scale(1.05);
+  background-color: black;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .plansContainer {
+    width: 300px; /* Aumentar a largura dos cards em dispositivos médios e grandes */
+    height: 450px; /* Ajustar a altura dos cards em dispositivos médios e grandes */
+    padding: 30px 50px; /* Ajustar o padding dos cards em dispositivos médios e grandes */
   }
-  
-  .buttonBuy {
-    background-color: orange;
-    font-size: 30px;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .buttonBuy:hover {
-    transform: scale(1.2);
-    background-color: white;
-  }
-  
-  .separator {
-    border: none;
-    border-top: 3px solid #bf3737; /* Cor e espessura da linha */
-    margin: 100px 0; /* Espaçamento acima e abaixo da linha */
-  }
+}

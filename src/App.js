@@ -1,12 +1,12 @@
-import UIComponents from "./components/UIComponents";
+import Routes from "./routes";
 
 function App() {
   return (
     <div>
-      {/*vai receber o componente*/}    
-      <UIComponents />     
+      <Routes />
     </div>
   );
 }
 
 export default App;
+

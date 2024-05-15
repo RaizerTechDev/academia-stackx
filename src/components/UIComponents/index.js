@@ -9,7 +9,7 @@ function UIComponents() {
     <div>
       <Header />
       <Hero />
-      <PlansandPrices />       
+      <PlansandPrices />
       <Footer />
     </div>
   );
@@ -25,7 +25,9 @@ const Header = () => {
         rel="external noreferrer"
         title="Whatsapp"
       >
-        <div class="logo">ACADEMIA <br/> RAFARZTECH </div>
+        <div class="logo">
+          ACADEMIA <br /> RAFARZTECH{" "}
+        </div>
       </a>
       <nav id="menu">
         <ul>
