@@ -5,7 +5,7 @@
 <div align="center">
 <img src="https://media.giphy.com/media/9TFBxN300KpCUI6sBD/giphy.gif" align="center" height="45" width="45">
 
-[ ( Clique aqui e escolha o Combo de sua preferência: `StackX-Academy-Project!!!`) ](https://rafarz76dev.github.io/academia-stackx-react/)
+[ ( Clique aqui e escolha o Combo de sua preferência: `StackX-Academy-Project!!!`) ](https://rafarz76dev.github.io/academia-stackx/)
 
 <br>
 
@@ -95,7 +95,8 @@ npm install -g serve
 serve -s build
 ```
 
-### 8. Routes 
+### 8. Routes
+
 1. Instale o pacote utilizando o comando para o `router-dom`:
 
 ```
