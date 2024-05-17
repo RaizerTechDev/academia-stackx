@@ -90,9 +90,10 @@ npm install -g serve
 ```
 
 2. Por fim, inicie a construção com o comando:
-   serve -s build
 
----
+```
+serve -s build
+```
 
 ### 8. Routes 
 1. Instale o pacote utilizando o comando para o `router-dom`:
@@ -104,6 +105,10 @@ npm install react-router-dom@5
 ### <img src="https://media.giphy.com/media/OMrq9FmUgObwogeL06/giphy.gif" align="center" height="35" width="45"> Agora para interagir com o projeto:
 
 #### Vai rodar o ambiente de execução:
+
+```
+npm install
+```
 
 ```
 npm start
