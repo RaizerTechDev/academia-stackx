@@ -22,6 +22,7 @@
 ### Objetivo
 
 - O projeto que desenvolvi é uma ferramenta vital para minha trajetória acadêmica e profissional: um Projeto de uma Academia em colaboração com a StackX. Nesta plataforma, os usuários podem interagir através de um menu suspenso para selecionar o Combo com a aula de sua preferência. Empreguei as principais tecnologias, como HTML, CSS, JavaScript e React, para dar vida a este projeto. Esta experiência não apenas solidificou meu domínio nessas áreas, mas também me capacitou para enfrentar com segurança os desafios que estão por vir.
+  "Implementamos também o uso do Routes para gerenciar as rotas da aplicação, facilitando a navegação entre diferentes páginas e melhorando a estrutura do projeto."
 
 ### Passo 1: Configuração do Ambiente de Desenvolvimento
 
