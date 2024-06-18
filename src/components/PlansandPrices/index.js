@@ -42,18 +42,65 @@ function PlansAndPrices() {
     phone: "",
     combo: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    // Limpar erros ao digitar
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {};
+
+    // Validação do nome
+    if (formData.name.length < 3) {
+      newErrors.name = "O nome deve ter pelo menos 3 caracteres.";
+      valid = false;
+    }
+
+    // Validação do email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      newErrors.email = "Por favor, insira um email válido.";
+      valid = false;
+    }
+
+    // Validação do telefone
+    if (formData.phone.length !== 11 || !/^\d{11}$/.test(formData.phone)) {
+      newErrors.phone = "O telefone deve ter exatamente 11 dígitos.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!validateForm()) {
+      return;
+    }
+
     // Adicionando o combo selecionado aos dados do formulário
     const comboSelected = listItems[selectedCombo].title; // Obtém o título do combo selecionado
     const updatedFormData = { ...formData, combo: comboSelected };
+    
+    // const updatedDateTimer = {
+    //   // Seus outros dados aqui
+    // };
+    
+    // Adicionando a data e hora atual ao updatedFormData
+    updatedFormData.timestamp = new Date().toLocaleDateString();
+    updatedFormData.time = new Date().toLocaleTimeString();
 
     const response = await fetch(
       "https://api.sheetmonkey.io/form/uM1Q7XZyF85NbpeU6wSwFB",
@@ -62,7 +109,9 @@ function PlansAndPrices() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(updatedFormData),
+        body: JSON.stringify(
+          updatedFormData        
+        ),
       }
     );
 
@@ -125,6 +174,9 @@ function PlansAndPrices() {
                       required="required"
                       placeholder="Digite seu nome"
                     />
+                    {errors.name && (
+                      <span className="error">{errors.name}</span>
+                    )}
                     <input
                       className="registerInput"
                       type="email"
@@ -135,22 +187,26 @@ function PlansAndPrices() {
                       required
                       placeholder="Digite seu e-mail"
                     />
-
+                    {errors.email && (
+                      <span className="error">{errors.email}</span>
+                    )}
                     <input
                       className="registerInput"
                       type="tel"
                       id="phone"
                       name="phone"
+                      pattern="[0-9]{11}"
                       value={formData.phone}
                       onChange={handleChange}
                       required
                       placeholder="Digite seu número de telefone (com DDD)"
                     />
-
+                    {errors.phone && (
+                      <span className="error">{errors.phone}</span>
+                    )}
                     <Button
                       className="buttonRegister"
                       type="submit"
-                      handlePurchase={handlePurchase}
                       text="Cadastrar"
                     />
                   </form>

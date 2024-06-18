@@ -6,7 +6,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={UIComponents} />        
+        <Route path="/" exact component={UIComponents} />
       </Switch>
     </BrowserRouter>
   );
