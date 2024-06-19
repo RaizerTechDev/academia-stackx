@@ -93,11 +93,7 @@ function PlansAndPrices() {
     // Adicionando o combo selecionado aos dados do formulário
     const comboSelected = listItems[selectedCombo].title; // Obtém o título do combo selecionado
     const updatedFormData = { ...formData, combo: comboSelected };
-    
-    // const updatedDateTimer = {
-    //   // Seus outros dados aqui
-    // };
-    
+
     // Adicionando a data e hora atual ao updatedFormData
     updatedFormData.timestamp = new Date().toLocaleDateString();
     updatedFormData.time = new Date().toLocaleTimeString();
