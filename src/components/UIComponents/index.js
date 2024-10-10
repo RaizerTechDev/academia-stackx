@@ -74,7 +74,7 @@ const Footer = () => {
       <h4 class="footer__title">Me acompanhe nas Redes Sociais!!!</h4>
       <div class="footer__social-icons social-icons">
         <a
-          href="https://github.com/RafaRz76Dev/portfolio-rafarz76dev"
+           href="https://github.com/RaizerTechDev"
           target="_blank"
           title="GitHub"
           class="social-icons__link social-icon"
@@ -92,7 +92,7 @@ const Footer = () => {
           <i class="fa-brands fa-linkedin fa-lg"></i>
         </a>
         <a
-          href="mailto:rafarz76dev@gmail.com"
+          href="mailto:rafael.dev.raizer.com"
           target="_blank"
           rel="external noreferrer"
           title="E-mail"
@@ -114,13 +114,13 @@ const Footer = () => {
 
       <a
         class="footer__brand"
-        href="https://rafarz76dev-portfoliotech.netlify.app/"
+        href="https://raizertechdev-portfolio.netlify.app/"
         target="_blank"
         title="Portfolio"
         rel="noreferrer"
       >
         <p class="footer__copyright">
-          &copy; 2024 RafaRz76Dev. All rights reserved.{" "}
+          &copy; 2024 RafaelRaizer. All rights reserved.{" "}
         </p>
       </a>
     </footer>
